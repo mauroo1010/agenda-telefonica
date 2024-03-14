@@ -19,11 +19,30 @@ public class AgendaTelefonica
     public void enterNumber(String name, String number) {
         agenda.put(name, number);
     } 
+
     /**
      * Devuelve el numero de teléfono del contacto indicado. Si el contacto no existe, 
      * devuelve null.
      */
-     public String lookupNumber(String name) {
+    public String lookupNumber(String name) {
         return agenda.get(name);
     }
+
+    /**
+     * Imprime todos los nombres de los contactos registrados
+     * en la agenda
+     */
+      public void printAllNames() {
+        System.out.println(agenda.keySet());
+    }
+
+    /**
+     * Imprime todos los nombres de los contactos registrados
+     * en la agenda
+     */
+    public void printAllNamesOneMultiline() {
+    for (String name : agenda.keySet()) {
+        System.out.println(name);
+    }
+}
 }
